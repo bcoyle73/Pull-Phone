@@ -35,14 +35,11 @@ end
 # SMS Request URL
 get_or_post '/sms/?' do
   # check the source of the SMS
-  logger.info params[:From]
-  logger.info settings.twilio_mobile_number
   if params[:From] == settings.twilio_mobile_number
     client = Twilio::REST::Client.new settings.twilio_sid, settings.twilio_token
     #pull the call from the front of the queue
     queues = client.account.queues.list()
     queues.each do |queue|
-      logger.info queue.friendly_name
       if queue.friendly_name == "pull_q"
         @call = client.account.queues.get(queue.sid).members.get("Front")
       end

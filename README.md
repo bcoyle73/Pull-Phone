@@ -1,7 +1,7 @@
 Pull-Phone
 ==========
 
-A Twilio application to allow you to pull phone calls to your mobile phone.  The application will answer a call to your twilio number, send you a text message asking whether to take the call or not.  If you do want to take the call it will forward the call on to your mobile phone.  If you do not wish to take the call it will take a voicemail in Twilio.
+A Twilio application to allow you to pull phone calls to your mobile phone.  The application will answer a call made to your twilio number, and send you a text message asking whether to take the call or not.  If you do want to take the call it will forward the call on to your mobile phone.  If you do not wish to take the call it will take a voicemail in Twilio.
 
 Getting Started
 ---------------
